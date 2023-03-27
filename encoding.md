@@ -15,8 +15,6 @@ nano file.txt.asc
 rm file.txt
 gpg -d -o file.txt file.txt.asc 
 cat file.txt
-pass
-apt install pass
 gpg --export some@mail.com > public.gpg
 rm file.txt*
 cat public.gpg 
@@ -27,4 +25,10 @@ gpg --export-secret-key -a some@mail.com secret.gpg
 gpg --delete-secret-keys some@mail.com
 gpg --delete-keys some@mail.com
 gpg --import secret.gpg
+apt install pass
+pass init
+pass git init 
+pass git remote add origin https://github.com/${user}/${repo}.git
+pass git branch -M main
+pass git pull
 ```
